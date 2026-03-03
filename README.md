@@ -1,7 +1,7 @@
 
-<html><body><h1 style="font-size:50px;color:blue;">WEZVA TECHNOLOGIES (ADAM) | <font style="color:red;"> www.wezva.com | <font style="color:green;"> +91-9739110917 </h1>
-<h1> Subscribe to our youtube channel: 
-<a href="https://www.youtube.com/c/DevOpsLearnEasy">https://www.youtube.com/c/DevOpsLearnEasy</a> </h1>
+<html><body><h1 style="font-size:50px;color:blue;">CLOUD WITH AATHIR | <font style="color:red;"> www.wezva.com | <font style="color:green;"> +91-9739110917 </h1>
+<h1> Please follow my Github account for Projects related to DevSecOps: 
+<a href="https://www.youtube.com/c/DevOpsLearnEasy">https://github.com/AathirLaeeque</a> </h1>
 </body></html>
 
 
@@ -40,6 +40,7 @@ $ sudo docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 
 ## Step 5: Enable Sonarqube webhook for Quality Gates & Install dependency-check plugin
 - [ ] Generate webhook & add the Jenkins URL as follows - http://URL:8080/sonarqube-webhook/
+
 
 
 
