@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.myapp</groupId>
-    <artifactId>wezvatech-demo</artifactId>
-    <version>9739110917</version>
+    <artifactId>aathir-demo</artifactId>
+    <version>849698</version>
     <packaging>jar</packaging>
 
     <name>Spring boot application example</name>
     <description>Demo wezvatech Ninjas project</description>
 
     <organization>
-        <name>ADAM M</name>
+        <name>AATHIR M</name>
     </organization>
 
 
