@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #---------------------------------------------#
-# Author: Adam WezvaTechnologies
-# Call/Whatsapp: +91-9739110917
+# Author: Aathir Laeeque
+# Call/Whatsapp: +91-8618198639
 #---------------------------------------------#
 
 # Ensure script is run with root privileges
