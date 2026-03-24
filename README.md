@@ -21,6 +21,7 @@
 
 ## Step 2: Install Docker, Java8, Java11 & Trivy on Build Server
 ```
+-> Git clone repo and then run
 $ sudo ./setup.sh
 ```
 
