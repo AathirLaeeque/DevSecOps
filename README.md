@@ -23,6 +23,13 @@
 ```
 -> Git clone repo and then run
 $ sudo ./setup.sh
+which docker
+which trivy
+which java
+ls -l /usr/lib/java
+ls -l /etc/alternatives/java
+ls /usr/bin/jvm
+/usr/lib/java/java-8/bin/java -version #java --version (current version installed)
 ```
 
 ## Step 3: Install Sonrqube on the t2.medium server
