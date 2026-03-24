@@ -13,7 +13,7 @@
 
 ## Step 1: Ensure all the necessary plugins are installed in Jenkins Master
 - [ ] Parameterized trigger plugin
-- [ ] Gitlab plugin
+- [ ] Gitlab plugin, Git and JDK Plugin
 - [ ] Docker Pipeline
 - [ ] Pipeline: AWS steps
 - [ ] SonarQube Scanner
