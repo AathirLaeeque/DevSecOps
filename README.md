@@ -13,7 +13,7 @@
 
 ## Step 1: Ensure all the necessary plugins are installed in Jenkins Master
 - [ ] Parameterized trigger plugin
-- [ ] Gitlab plugin
+- [ ] Gitlab plugin, Git and JDK Plugin
 - [ ] Docker Pipeline
 - [ ] Pipeline: AWS steps
 - [ ] SonarQube Scanner
@@ -21,6 +21,7 @@
 
 ## Step 2: Install Docker, Java8, Java11 & Trivy on Build Server
 ```
+-> Git clone repo and then run
 $ sudo ./setup.sh
 ```
 
