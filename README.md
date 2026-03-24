@@ -23,6 +23,13 @@
 ```
 -> Git clone repo and then run
 $ sudo ./setup.sh
+which docker
+which trivy
+which java
+ls -l /usr/lib/java
+ls -l /etc/alternatives/java
+ls /usr/bin/jvm
+/usr/lib/java/java-8/bin/java -version #java --version (current version installed)
 ```
 
 ## Step 3: Install Sonrqube on the t2.medium server
@@ -34,7 +41,9 @@ $ sudo docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 ```
 
 ## Step 4: Add necessary credentials
-- [ ] Generate Sonarqube token of type "global analysis token" and add it as Jenkins credential of type "secret text"
+- [ ] Generate Sonarqube token of type "global analysis token" and add it as Jenkins credential of type "secret text". Manage Jenkins -> System -> SQ servers -> same name(mysonarqube) -> SQ URL -> Creds we just added.
+- [ ] For QG Jenkins needs to check with SQ and get the QG results for that we need to configure webhook.
+- [ ] For SCA we need to install OWASP dependency check plugin.
 - [ ] Add dockerhub credentials as username/password type
 - [ ] Add Github credentials 
 - [ ] Add Build server credentials for Jenkins master to connect
