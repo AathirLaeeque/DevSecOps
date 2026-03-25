@@ -123,6 +123,7 @@
                  <format>json</format>
                  <format>html</format>
                  </formats>
+			     <nvdApiKey>98344c3b-d7d4-4f1f-b31a-15b937bc0caf</nvdApiKey>
               </configuration>
              </plugin>
 	    <plugin>
