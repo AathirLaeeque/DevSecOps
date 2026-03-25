@@ -83,10 +83,12 @@ pipeline {
 		  
 		echo "=== Checking running containers ==="
    	    sh "docker ps -a"
+		  
+		sh "docker logs smokerun || true"
     
   		echo "=== Waiting for app ==="
-    
         sh "sleep 90; ./check.sh"
+		  
         sh "docker rm --force smokerun"
         }
     }
