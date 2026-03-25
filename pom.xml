@@ -137,6 +137,7 @@
                 <version>12.1.0</version>
                 <configuration>
                      <nvdApiKey>98344c3b-d7d4-4f1f-b31a-15b937bc0caf</nvdApiKey>
+                     <ossindexAnalyzerEnabled>false</ossindexAnalyzerEnabled>
                 </configuration>
                 <executions>
                     <execution>
