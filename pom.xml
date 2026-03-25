@@ -5,11 +5,11 @@
 
     <groupId>com.myapp</groupId>
     <artifactId>aathir-demo</artifactId>
-    <version>8496988</version>
+    <version>849698</version>
     <packaging>jar</packaging>
 
     <name>Spring boot application example</name>
-    <description>Demo wezvatech Ninjas project</description>
+    <description>Demo Ninjas project</description>
 
     <organization>
         <name>AATHIR M</name>
