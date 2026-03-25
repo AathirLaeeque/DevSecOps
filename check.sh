@@ -3,7 +3,7 @@
 curl -is --max-redirs 10 http://localhost:8082 -L | grep -w "HTTP/1.1 200" > /dev/null
 if [ $? -ne "0" ]; then
    echo "============================================================="
-   echo "Unable to reach sample springboot application on port 8082 !!"
+   echo "Unable to reach sample springboot application on port 8080 !!"
    echo "============================================================="
 else
    echo "================="
