@@ -123,6 +123,8 @@
                  <format>json</format>
                  <format>html</format>
                  </formats>
+				 <autoUpdate>false</autoUpdate>
+				 <failOnError>false</failOnError>
               </configuration>
              </plugin>
 	    <plugin>
