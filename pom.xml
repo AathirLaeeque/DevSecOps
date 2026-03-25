@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.myapp</groupId>
@@ -8,87 +11,132 @@
     <version>8496988</version>
     <packaging>jar</packaging>
 
-    <name>Spring boot application example</name>
+    <name>Spring Boot Application Example</name>
     <description>Demo wezvatech Ninjas project</description>
 
     <organization>
         <name>AATHIR M</name>
     </organization>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.13</version>
+        <relativePath/>
+    </parent>
 
-	<parent>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-parent</artifactId>
-	    <version>2.7.13</version>
-	    <relativePath/>
-	</parent>
-	
-	<properties>
-	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	    <java.version>11</java.version>
-	    <com.google.guava.guava.version>31.1-jre</com.google.guava.guava.version>
-	    <io.springfox.springfox-swagger2>3.0.0</io.springfox.springfox-swagger2>
-	    <io.springfox.springfox-swagger-ui>3.0.0</io.springfox.springfox-swagger-ui>
-	</properties>
-	
-	<build>
-	    <plugins>
-	        <!-- Spring Boot -->
-	        <plugin>
-	            <groupId>org.springframework.boot</groupId>
-	            <artifactId>spring-boot-maven-plugin</artifactId>
-	        </plugin>
-	
-	        <!-- OWASP Dependency-Check -->
-	        <plugin>
-	            <groupId>org.owasp</groupId>
-	            <artifactId>dependency-check-maven</artifactId>
-	            <version>12.1.0</version>
-	            <executions>
-	                <execution>
-	                    <goals>
-	                        <goal>check</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	            <configuration>
-	                <formats>
-	                    <format>html</format>
-	                    <format>json</format>
-	                </formats>
-	                <nvdApiKey>98344c3b-d7d4-4f1f-b31a-15b937bc0caf</nvdApiKey>
-	            </configuration>
-	        </plugin>
-	
-	        <!-- JaCoCo -->
-	        <plugin>
-	            <groupId>org.jacoco</groupId>
-	            <artifactId>jacoco-maven-plugin</artifactId>
-	            <version>0.8.10</version>
-	            <executions>
-	                <execution>
-	                    <id>prepare-agent</id>
-	                    <goals><goal>prepare-agent</goal></goals>
-	                </execution>
-	                <execution>
-	                    <id>report</id>
-	                    <phase>verify</phase>
-	                    <goals><goal>report</goal></goals>
-	                </execution>
-	            </executions>
-	        </plugin>
-	
-	        <!-- Maven Surefire (for tests, Java 11 compatible) -->
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-surefire-plugin</artifactId>
-	            <version>3.1.2</version>
-	            <configuration>
-	                <forkCount>1</forkCount>
-	                <reuseForks>true</reuseForks>
-	                <argLine>-Xmx1024m -XX:+UseG1GC</argLine>
-	            </configuration>
-	        </plugin>
-	    </plugins>
-	</build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>11</java.version>
+        <com.google.guava.guava.version>31.1-jre</com.google.guava.guava.version>
+        <io.springfox.springfox-swagger2>3.0.0</io.springfox.springfox-swagger2>
+        <io.springfox.springfox-swagger-ui>3.0.0</io.springfox.springfox-swagger-ui>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- H2 Database (runtime) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Guava Utilities -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${com.google.guava.guava.version}</version>
+        </dependency>
+
+        <!-- Swagger 3 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+            </plugin>
+
+            <!-- JaCoCo for code coverage -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.10</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals><goal>prepare-agent</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals><goal>report</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- OWASP Dependency Check -->
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>12.1.0</version>
+                <executions>
+                    <execution>
+                        <goals><goal>check</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
