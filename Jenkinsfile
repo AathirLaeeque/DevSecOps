@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', credentialsId: 'GitCred', url: 'https://github.com/AathirLaeeque/DevSecOps.git'
+        git branch: 'release', credentialsId: 'GitCred', url: 'https://github.com/AathirLaeeque/DevSecOps.git'
       }
     }
   
