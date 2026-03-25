@@ -80,6 +80,16 @@ pipeline {
       steps { 
         echo "Smoke Test the Image"
         sh "docker run -d --name smokerun -p 8080:8080 aathir007/democicd"
+		echo "=== Checking running containers ==="
+   	    docker ps -a
+    
+    	echo "=== Container logs ==="
+    	docker logs smokerun || true
+    
+  		echo "=== Waiting for app ==="
+    	sleep 120
+    
+    	chmod +x check.sh
         sh "sleep 90; ./check.sh"
         sh "docker rm --force smokerun"
         }
