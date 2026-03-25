@@ -87,7 +87,6 @@ pipeline {
   		echo "=== Waiting for app ==="
     	sleep 120
     
-    	chmod +x check.sh
         sh "sleep 90; ./check.sh"
         sh "docker rm --force smokerun"
         }
