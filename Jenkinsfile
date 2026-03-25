@@ -16,7 +16,7 @@ pipeline {
    stage('Stage I: Build') {
       steps {
         echo "Building Jar Component ..."
-        sh "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64; mvn clean install -U"
+        sh "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64; mvn clean install -X"
       }
     }
 
