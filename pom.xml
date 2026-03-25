@@ -5,15 +5,16 @@
 
     <groupId>com.myapp</groupId>
     <artifactId>aathir-demo</artifactId>
-    <version>849698</version>
+    <version>8496988</version>
     <packaging>jar</packaging>
 
     <name>Spring boot application example</name>
-    <description>Demo Ninjas project</description>
+    <description>Demo wezvatech Ninjas project</description>
 
     <organization>
         <name>AATHIR M</name>
     </organization>
+
 
 
     <parent>
@@ -58,6 +59,12 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-java8</artifactId>
+            <version>5.0.5.Final</version>
+        </dependency>
+
         <!-- In-Memory DB -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -89,12 +96,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+            <version>1.2.0.RELEASE</version>
         </dependency>
 
     </dependencies>
 
     <build>
-	  <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -116,8 +123,6 @@
                  <format>json</format>
                  <format>html</format>
                  </formats>
-				 <nvdApiKey>98344c3b-d7d4-4f1f-b31a-15b937bc0caf</nvdApiKey>
-				 <failOnError>false</failOnError>
               </configuration>
              </plugin>
 	    <plugin>
@@ -139,7 +144,6 @@
 				</executions>
 	    </plugin>
         </plugins>
-	  </pluginManagement>
     </build>
 
 </project>
